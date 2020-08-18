@@ -56,6 +56,7 @@ export class UserResolver {
         email,
         password: hashedPassword
       });
+      console.log(email, password);
     } catch (err) {
       console.log(err);
       return false;
