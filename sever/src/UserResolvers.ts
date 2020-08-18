@@ -32,7 +32,7 @@ export class UserResolver {
       throw new Error('Invalid LOGIN');
     }
 
-    const valid = compare(password, user.password);
+    const valid = await compare(password, user.password);
 
     if (!valid) {
       throw new Error('Invalid email or passsword');
