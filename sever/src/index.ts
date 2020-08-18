@@ -5,7 +5,7 @@ import { buildSchema } from 'type-graphql';
 import { UserResolver } from './UserResolvers';
 import { createConnection } from 'typeorm';
 
-(async () =>  {
+(async () => {
 	const app = express();
 	app.get('/', (_req, res) => {
 		res.send('Hello From typescript 🚀🎉');
@@ -13,16 +13,16 @@ import { createConnection } from 'typeorm';
 
 	await createConnection();
 
-	const appoloServer = new ApolloServer ({
-		schema: await buildSchema ({
+	const appoloServer = new ApolloServer({
+		schema: await buildSchema({
 			resolvers: [UserResolver]
 		})
 	});
 
-	appoloServer.applyMiddleware ({ app });
+	appoloServer.applyMiddleware({ app });
 
-	app.listen(4000, () => console.log ('this shit is up and running on port 4000'));
-})()
+	app.listen(4000, () => console.log('this shit is up and running on port 4000'));
+})();
 
 // createConnection().then(async connection => {
 
