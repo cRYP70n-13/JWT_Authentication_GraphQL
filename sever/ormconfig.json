@@ -3,8 +3,8 @@
    "host": "localhost",
    "port": 5432,
    "username": "postgres",
-   "password": "postgres",
-   "database": "test",
+   "password": "",
+   "database": "jwt-auth-example",
    "synchronize": true,
    "logging": false,
    "entities": [
