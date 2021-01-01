@@ -4,3 +4,4 @@ sever/node_modules/
 build/
 tmp/
 temp/
+node_modules
